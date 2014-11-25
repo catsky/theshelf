@@ -82,7 +82,7 @@ class BookDecorator < Draper::Decorator
     else
       h.content_tag(:div, class: 'borrower') do
         h.content_tag(:div, h.image_tag(current_borrower.avatar.thumb)) +
-        h.content_tag(:div, current_borrower.name, class: 'milli')
+          h.content_tag(:div, current_borrower.name, class: 'milli')
       end
     end
   end

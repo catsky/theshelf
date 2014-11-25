@@ -39,6 +39,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.0'
   gem 'capistrano3-puma'
   gem 'quiet_assets'
+  gem 'rubocop', require: false
 end
 
 group :test do
