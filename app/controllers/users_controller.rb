@@ -23,10 +23,6 @@ class UsersController < Clearance::UsersController
   private
 
   def user_params
-    if params[:user]
-      params.require(:user).permit(:email, :password, :first_name, :last_name, :avatar, :avatar_cache, :remove_avatar)
-    else
-      {}
-    end
+    params.require(:user).permit(:email, :password, :first_name, :last_name, :avatar, :avatar_cache, :remove_avatar)
   end
 end

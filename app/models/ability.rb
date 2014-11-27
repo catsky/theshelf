@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    send user.role if user
+    public_send user.role if user
   end
 
   def registered
