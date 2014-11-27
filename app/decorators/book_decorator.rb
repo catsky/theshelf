@@ -80,15 +80,19 @@ class BookDecorator < Draper::Decorator
     if borrowed_by_me?
       return_link + extend_link
     else
-      h.content_tag(:div, class: 'borrower') do
-        h.content_tag(:div, h.image_tag(current_borrower.avatar.thumb)) +
-          h.content_tag(:div, current_borrower.name, class: 'milli')
-      end
+      borrower_representation
     end
   end
 
   def borrowed_by_me?
     current_borrower == h.presented_current_user
+  end
+
+  def borrower_representation
+    h.content_tag(:div, class: 'borrower') do
+      h.content_tag(:div, h.image_tag(current_borrower.avatar.thumb)) +
+        h.content_tag(:div, current_borrower.name, class: 'milli')
+    end
   end
 
   def current_borrower

@@ -46,7 +46,7 @@ step "I submit the book" do
 end
 
 step "I submit the ISBN" do
-  stub_goodreads_request
+  WebmockHelpers.new.stub_goodreads_request
   click_on I18n.t('books.isbn_submit')
 end
 
@@ -72,7 +72,7 @@ step "I fill the ebook form" do
 end
 
 step "I fill the ISBN form" do
-  @book ||= build(:book, goodreads_mock_response)
+  @book ||= build(:book, GoodreadsResponse.new.mock_response)
   within("#import-book-form") do
     fill_in 'isbn-input', with: @book.isbn
   end

@@ -1,4 +1,4 @@
-class Api::V1::RatingsController < ApplicationController
+class API::V1::RatingsController < API::BaseController
   before_action :authorize
 
   respond_to :json

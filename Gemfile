@@ -4,7 +4,7 @@ gem "cancan"
 gem 'carrierwave', git: 'https://github.com/carrierwaveuploader/carrierwave.git'
 gem 'clearance'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails', '~> 1.1.2'
+gem 'compass-rails', '~> 1.1.7'
 gem 'dotenv-rails'
 gem 'draper', '~> 1.3'
 gem 'ejs'
@@ -26,7 +26,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.1.0'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
 end

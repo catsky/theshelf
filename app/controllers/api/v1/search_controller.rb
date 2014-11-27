@@ -1,4 +1,4 @@
-class Api::V1::SearchController < ApplicationController
+class API::V1::SearchController < API::BaseController
   before_action :authorize
 
   respond_to :json

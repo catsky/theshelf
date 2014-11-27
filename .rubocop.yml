@@ -2,3 +2,9 @@ inherit_from: .rubocop_todo.yml
 
 Metrics/LineLength:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
