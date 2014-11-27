@@ -1,9 +1,9 @@
 = form_for :session, :url => session_index_path do |form|
   fieldset
     = form.label :email, class: 'hide-visually'
-    .text = form.text_field :email, :type => 'email'
+    .text = form.text_field :email, :type => 'email', placeholder: t("helpers.label.user.email")
     = form.label :password, class: 'hide-visually'
-    .text = form.password_field :password
+    .text = form.password_field :password, placeholder: t("helpers.label.user.password")
 
     .form-actions
       = link_to t('forms.users.new.sign_up'), sign_up_path, class: 'btn-negative'
