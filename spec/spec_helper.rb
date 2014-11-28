@@ -16,3 +16,8 @@ RSpec.configure do |config|
 
   config.order = :random
 end
+
+if ENV['USE_PIPPI']
+  require 'pippi'
+  Pippi::AutoRunner.new(checkset: ENV['PIPPI_CHECKSET'] || 'basic')
+end

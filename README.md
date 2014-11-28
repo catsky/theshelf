@@ -32,3 +32,12 @@ If you're going live the The Shelf on your company or book club then you should 
 * Borrow/Return books
 * Comment & rate a book
 * Edit your profile information
+
+## Development
+
+To run [Pippi](https://github.com/tcopeland/pippi) you need Ruby 2.1.2 and then
+run it with the `USE_PIPPI` environment variable set.
+
+```bash
+USE_PIPPI=true bundle exec rake && cat log/pippi.log
+```
