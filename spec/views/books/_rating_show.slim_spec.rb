@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'books/_rating_show.slim', :type => :view do
+describe 'books/_rating_show.slim', type: :view do
   let(:user) { create(:user) }
 
   it 'renders a label with the average rating as title' do
@@ -8,7 +8,7 @@ describe 'books/_rating_show.slim', :type => :view do
 
     render 'books/rating_show', book: book.decorate, rating_value: 2
 
-    expect(rendered).to match /title="2\.0"/
+    expect(rendered).to match(/title="2\.0"/)
   end
 
   it 'renders two full stars for an average rating of 2.0' do

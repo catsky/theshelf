@@ -1,8 +1,8 @@
 module UserRoles
-  ROLES = [
-    'registered',
-    'admin'
-  ]
+  ROLES = %w(
+    registered
+    admin
+  )
   private_constant :ROLES
 
   def self.all

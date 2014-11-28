@@ -21,11 +21,11 @@ TheShelf::Application.routes.draw do
     patch '/' => 'users#update', as: 'update_my_account'
   end
 
-  get '/log_in' => 'sessions#new', :as => 'log_in'
-  delete '/log_out' => 'sessions#destroy', :as => 'log_out'
+  get '/log_in' => 'sessions#new', as: 'log_in'
+  delete '/log_out' => 'sessions#destroy', as: 'log_out'
 
-  get '/sign_up' => 'users#new', :as => nil
-  post '/users' => 'users#create', :as => nil
+  get '/sign_up' => 'users#new', as: nil
+  post '/users' => 'users#create', as: nil
 
   namespace 'api' do
     namespace 'v1' do

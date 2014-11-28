@@ -1,13 +1,13 @@
-ENV["RAILS_ENV"] ||= 'test'
+ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
-require File.expand_path("../../config/environment", __FILE__)
+require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'webmock/rspec'
 require 'turnip/capybara'
 require 'shoulda/matchers'
 
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-Dir.glob("spec/features/step_definitions/**/*steps.rb") { |f| load f, true }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir.glob('spec/features/step_definitions/**/*steps.rb') { |f| load f, true }
 
 ActiveRecord::Migration.check_pending!
 

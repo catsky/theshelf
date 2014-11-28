@@ -18,7 +18,7 @@ class API::V1::RatingsController < API::BaseController
   private
 
   def book
-    @_book ||= Book.includes({reviews: :reviewer}).find(params[:book_id])
+    @_book ||= Book.includes(reviews: :reviewer).find(params[:book_id])
   end
 
   def rate_params

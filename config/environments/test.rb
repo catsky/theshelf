@@ -13,7 +13,8 @@ class ClearanceBackDoor
   private
 
   def sign_in_through_the_back_door
-    if user_id = params['as']
+    user_id = params['as']
+    if user_id
       user = User.find(user_id)
       @env[:clearance].sign_in(user)
     end
@@ -40,7 +41,7 @@ TheShelf::Application.configure do
   config.action_controller.allow_forgery_protection = false
 
   config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   config.active_support.deprecation = :stderr
 

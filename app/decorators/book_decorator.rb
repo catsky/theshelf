@@ -112,8 +112,8 @@ class BookDecorator < Draper::Decorator
   end
 
   def extend_link
-    if object.extendable?
-      h.link_to h.t('books.actions.extend'), extend_path, class: 'btn-negative'
-    end
+    return unless object.extendable?
+
+    h.link_to h.t('books.actions.extend'), extend_path, class: 'btn-negative'
   end
 end

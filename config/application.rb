@@ -21,7 +21,7 @@ module TheShelf
     # config.i18n.default_locale = :de
     I18n.enforce_available_locales = false
 
-    config.action_view.field_error_proc = Proc.new { |html_tag, instance|
+    config.action_view.field_error_proc = Proc.new { |html_tag, _instance|
       html_tag
     }
   end

@@ -22,6 +22,7 @@ class ImportBook
     end
   end
 
+  # rubocop:disable Metrics/MethodLength
   def format_response
     date = convert_date
     authors = author_name
@@ -35,6 +36,7 @@ class ImportBook
       isbn: @book.isbn13
     }
   end
+  # rubocop:enable Metrics/MethodLength
 
   def convert_date
     return if @book.publication_year.empty?

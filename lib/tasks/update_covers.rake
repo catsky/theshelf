@@ -61,7 +61,7 @@ namespace :web do
 end
 
 def within_tmp_dir
-  Dir.mkdir('covers_tmp') unless Dir.exists?('covers_tmp')
+  Dir.mkdir('covers_tmp') unless Dir.exist?('covers_tmp')
   Dir.chdir('covers_tmp') do
     yield
   end

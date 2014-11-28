@@ -1,9 +1,9 @@
 module LoanStates
-  STATES = [
-    'available',
-    'lent',
-    'unavailable'
-  ]
+  STATES = %w(
+    available
+    lent
+    unavailable
+  )
   private_constant :STATES
 
   def self.all
