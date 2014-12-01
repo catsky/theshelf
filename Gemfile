@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem "cancan"
 gem 'carrierwave', git: 'https://github.com/carrierwaveuploader/carrierwave.git'
-gem 'clearance', github: 'zamith/clearance'
+gem 'clearance'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.1.7'
 gem 'dotenv-rails'
