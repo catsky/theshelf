@@ -9,7 +9,7 @@ module API
         user = User.new user_params
 
         if user.save
-          render json_v1: user
+          render json_vendored: user
         else
           head :bad_request
         end

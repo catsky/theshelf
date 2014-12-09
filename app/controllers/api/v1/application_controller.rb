@@ -2,7 +2,6 @@ module API
   module V1
     class ApplicationController < ActionController::API
       include ActionController::HttpAuthentication::Token::ControllerMethods
-      include ActionController::MimeResponds
       include ActionController::Serialization
       include CanCan::ControllerAdditions
 
@@ -14,8 +13,16 @@ module API
       check_authorization
 
       # necessary to return the right content type and response body
-      ActionController::Renderers.add :json_v1 do |resource, options|
-        self.content_type = Mime::JSON_V1
+      ActionController::Renderers.add :json_vendored do |resource, options|
+        new_content_type = nil
+
+        request.accepts.each do |accept|
+          if accept.to_s =~ /(application\/vnd\.theshelf-v\d+\+json)/ && new_content_type.nil?
+            new_content_type = $1
+          end
+        end
+
+        self.content_type = new_content_type
         self.response_body = _render_option_json(resource, options)
       end
 
@@ -38,9 +45,7 @@ module API
       def unauthorized
         headers['WWW-Authenticate'] = 'Token realm="Application"'
 
-        respond_to do |format|
-          format.json_v1 { render json_v1: 'Bad credentials', status: :unauthorized }
-        end
+        render json_vendored: 'Bad credentials', status: :unauthorized
       end
 
       def record_not_found

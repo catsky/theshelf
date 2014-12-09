@@ -11,7 +11,7 @@ describe 'V1 Authentication', type: :request do
     it 'responds with the right content type' do
       get '/books', nil, authenticated_request_header(user: user)
 
-      expect(response.content_type).to be Mime::JSON_V1
+      expect(response.content_type.to_s).to eq 'application/vnd.theshelf-v1+json'
     end
   end
 
@@ -25,7 +25,7 @@ describe 'V1 Authentication', type: :request do
     it 'responds with the right content type' do
       get '/books', nil, request_header
 
-      expect(response.content_type).to be Mime::JSON_V1
+      expect(response.content_type.to_s).to eq 'application/vnd.theshelf-v1+json'
     end
 
     it 'responds with the right realm' do
