@@ -1,3 +1,4 @@
+@pending
 Feature: Sign up
   As a visitor
   I want to sign up
