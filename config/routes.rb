@@ -25,7 +25,8 @@ TheShelf::Application.routes.draw do
   delete '/log_out' => 'sessions#destroy', as: 'log_out'
 
   get '/sign_up' => 'users#new', as: nil
-  post '/users' => 'users#create', as: nil
+  # FIXME this should be re-thinked. With the previous version, everyone could sign up at will
+  # post '/users' => 'users#create', as: nil
 
   namespace 'api' do
     namespace 'v1' do
