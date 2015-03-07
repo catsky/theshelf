@@ -23,6 +23,7 @@ TheShelf::Application.routes.draw do
 
   get '/log_in' => 'sessions#new', as: 'log_in'
   delete '/log_out' => 'sessions#destroy', as: 'log_out'
+  get '/auth/:provider/callback' => 'sessions#create_from_omniauth'
 
   get '/sign_up' => 'users#new', as: nil
   # FIXME this should be re-thinked. With the previous version, everyone could sign up at will

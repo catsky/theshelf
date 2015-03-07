@@ -1,23 +1,26 @@
 source 'https://rubygems.org'
 
+gem 'rails', '4.2.0'
+
 gem "cancan"
 gem 'carrierwave', git: 'https://github.com/carrierwaveuploader/carrierwave.git'
 gem 'clearance'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails', '~> 1.1.7'
+gem 'compass-rails', '~> 2.0.4'
 gem 'dotenv-rails'
 gem 'draper', '~> 1.3'
 gem 'ejs'
 gem 'font-awesome-rails'
+gem 'headquarters', '~> 0.3.0'
+gem 'omniauth-headquarters', '~> 0.2.0'
 gem 'goodreads'
 gem 'jquery-rails'
 gem 'mechanize'
 gem 'mini_magick'
 gem 'paranoia', '~> 2.0'
 gem 'puma'
-gem 'rails', '4.0.0'
 gem 'rvm-capistrano'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'slim-rails'
 gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
@@ -27,12 +30,11 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'shoulda-matchers', require: false
-  gem 'spring'
-  gem 'spring-commands-rspec'
 end
 
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'capistrano',         '~> 3.0.1'
   gem 'capistrano-rails',   '~> 1.1.0'
   gem 'capistrano-rvm',     '~> 0.1.0'
@@ -53,8 +55,4 @@ group :test do
   gem 'timecop'
   gem 'turnip'
   gem 'webmock'
-end
-
-group :doc do
-  gem 'sdoc', require: false
 end

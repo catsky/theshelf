@@ -1,3 +1,7 @@
+- if ENV['HQ_APP_ID']
+  .sign-in-via-hq-btn
+    = link_to t('forms.users.new.hq_sign_in'), '/auth/headquarters', class: 'btn-negative'
+
 = form_for :session, :url => session_index_path do |form|
   fieldset
     = form.label :email, class: 'hide-visually'

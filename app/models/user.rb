@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
     Book.joins(:loans).
       where(loans: { user_id: id }).where.not(loans: { closed_at: nil }).uniq
   end
+
+  def name=(name)
+    self.first_name, self.last_name = name.split(' ', 2)
+  end
 end
