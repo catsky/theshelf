@@ -1,5 +1,5 @@
 class BookKeeperController < ApplicationController
-  before_action :authorize
+  before_action :require_login
 
   def borrow
     BookKeeper.new(book: book).lend_to!(borrower: current_user)

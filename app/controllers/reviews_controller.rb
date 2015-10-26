@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :authorize
+  before_action :require_login
 
   def new
     @book = book.decorate

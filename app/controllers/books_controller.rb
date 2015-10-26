@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authorize
+  before_action :require_login
 
   def index
     @books = Book.all.decorate
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
   def update
     if book.update(book_params)
       flash[:success] = t('flash.book.updated')
-      redirect_to book_path(@book)
+      redirect_to book_path(book)
     else
       render :edit
     end

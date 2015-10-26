@@ -1,7 +1,7 @@
 #The Shelf
 
 [![Code Climate](https://codeclimate.com/github/groupbuddies/theshelf.png)](https://codeclimate.com/github/groupbuddies/theshelf)
-[![Build Status](https://travis-ci.org/votinginfoproject/ios7-white-label-app.svg?branch=develop)](https://travis-ci.org/votinginfoproject/ios7-white-label-app)
+[![Build Status](https://semaphoreci.com/api/v1/projects/a61e8b4f-975e-48fc-bd8e-f897ba004f71/297232/badge.svg)](https://semaphoreci.com/groupbuddies/theshelf)
 
 The Shelf is an online library for small companies to keep track of their books, encourage reading and to create discussion around knowledge. It has been developed as an internal tool by Group Buddies.
 

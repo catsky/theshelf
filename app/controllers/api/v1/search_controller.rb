@@ -1,5 +1,5 @@
 class API::V1::SearchController < API::BaseController
-  before_action :authorize
+  before_action :require_login
 
   respond_to :json
 

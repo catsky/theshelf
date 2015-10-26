@@ -24,5 +24,7 @@ module TheShelf
     config.action_view.field_error_proc = Proc.new { |html_tag, _instance|
       html_tag
     }
+
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end
