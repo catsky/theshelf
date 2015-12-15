@@ -18,7 +18,7 @@ gem 'jquery-rails'
 gem 'mechanize'
 gem 'mini_magick'
 gem 'paranoia', '~> 2.0'
-gem 'puma'
+gem 'puma', '~> 2.15.3'
 gem 'responders', '~> 2.1'
 gem 'rvm-capistrano'
 gem 'sass-rails'
@@ -47,7 +47,7 @@ end
 
 group :test do
   gem 'capybara', '~> 2.0'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit', '~> 1.7.1'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.2'
   gem 'nokogiri'
